@@ -1,5 +1,5 @@
-import { isInited, signalOf, solidMutWithSignal, storage, waitInit } from "./storage";
-import { JSX } from "solid-js";
+import { isInited, signalOf, solidMutWithSignal, idbStore, waitInit } from "./storage";
+import { createSignal, JSX } from "solid-js";
 import { createMutable } from "solid-js/store";
 import { log } from "./util";
 import { ModalBody, ModalHeader, ModalRoot, openModal } from "shelter-ui";
@@ -20,8 +20,8 @@ export type EvaledPlugin = {
   settings?(): JSX.Element;
 };
 
-const internalData = storage<StoredPlugin>("plugins-internal");
-const pluginStorages = storage("plugins-data");
+const internalData = idbStore<StoredPlugin>("plugins-internal");
+const pluginStorages = idbStore("plugins-data");
 const [internalLoaded, loadedPlugins] = solidMutWithSignal(createMutable({} as Record<string, EvaledPlugin>));
 
 export const installedPlugins = signalOf(internalData);

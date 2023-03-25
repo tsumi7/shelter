@@ -9,6 +9,7 @@
     "@cumjar/websmack": "^1.2.0",
     "idb": "^7.1.0",
     "shelter-assets": "workspace:*",
+    "shelter-storage": "workspace:*",
     "shelter-ui": "workspace:*",
     "solid-js": "^1.5.7",
     "spitroast": "^1.4.2"

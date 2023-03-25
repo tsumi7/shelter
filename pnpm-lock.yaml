@@ -53,6 +53,7 @@ importers:
       postcss: ^8.4.17
       postcss-modules: ^5.0.0
       shelter-assets: workspace:*
+      shelter-storage: workspace:^1.0.0
       shelter-ui: workspace:*
       solid-js: ^1.5.7
       spitroast: ^1.4.2
@@ -60,6 +61,7 @@ importers:
       '@cumjar/websmack': 1.2.0
       idb: 7.1.0
       shelter-assets: link:../shelter-assets
+      shelter-storage: link:../shelter-storage
       shelter-ui: link:../shelter-ui
       solid-js: 1.5.7
       spitroast: 1.4.2
@@ -87,6 +89,14 @@ importers:
     devDependencies:
       shelter: link:../shelter
       typescript: 4.9.5
+
+  packages/shelter-storage:
+    specifiers:
+      idb: ^7.1.0
+      solid-js: ^1.5.7
+    dependencies:
+      idb: 7.1.0
+      solid-js: 1.5.7
 
   packages/shelter-ui:
     specifiers:
